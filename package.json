@@ -1,0 +1,69 @@
+{
+  "name": "pi-anthropic-auth",
+  "version": "0.0.1",
+  "description": "Use an Anthropic Claude plan with the Pi coding agent through OAuth.",
+  "license": "MIT",
+  "author": "Marcello Sylvester Bauer <sylv@sylv.io>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sylv-io/pi-anthropic-auth.git"
+  },
+  "homepage": "https://github.com/sylv-io/pi-anthropic-auth#readme",
+  "bugs": {
+    "url": "https://github.com/sylv-io/pi-anthropic-auth/issues"
+  },
+  "type": "module",
+  "files": [
+    "src",
+    "LICENSE",
+    "README.md"
+  ],
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "anthropic",
+    "oauth",
+    "claude"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "format": "biome format --write .",
+    "format:check": "biome format .",
+    "lint": "biome lint .",
+    "lint:fix": "biome lint --write .",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test",
+    "check": "biome check --error-on-warnings . && tsc --noEmit && node --import tsx --test",
+    "pack:check": "npm pack --dry-run"
+  },
+  "pi": {
+    "extensions": [
+      "./src/index.ts"
+    ]
+  },
+  "dependencies": {
+    "@cortexkit/anthropic-auth-core": "1.4.1"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-ai": ">=0.80.6",
+    "@earendil-works/pi-coding-agent": ">=0.80.6"
+  },
+  "peerDependenciesMeta": {
+    "@earendil-works/pi-ai": {
+      "optional": true
+    },
+    "@earendil-works/pi-coding-agent": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.3",
+    "@earendil-works/pi-ai": "0.80.6",
+    "@earendil-works/pi-coding-agent": "0.80.6",
+    "@types/node": "^24.10.0",
+    "tsx": "^4.23.0",
+    "typescript": "^5.9.3"
+  }
+}
