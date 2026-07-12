@@ -3,10 +3,19 @@
   "vcs": {
     "enabled": true,
     "clientKind": "git",
-    "useIgnoreFile": true
+    "useIgnoreFile": false
   },
   "files": {
-    "includes": ["**", "!package-lock.json"]
+    "includes": [
+      "**/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx,json,jsonc}",
+      "!package-lock.json",
+      "!node_modules",
+      "!.npm",
+      "!.cache",
+      "!coverage",
+      "!dist",
+      "!generated-images"
+    ]
   },
   "formatter": {
     "enabled": true,

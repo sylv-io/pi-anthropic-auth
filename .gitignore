@@ -1,6 +1,10 @@
 node_modules/
 coverage/
 dist/
+.cache/
+.npm/
+*.log
+*.tmp
 *.tgz
 .env
 .env.*
