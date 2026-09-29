@@ -1,5 +1,8 @@
 # pi-anthropic-auth
 
+> [!NOTE]
+> **Archived:** This repository is no longer maintained. I now use [gotgenes/pi-anthropic-auth](https://github.com/gotgenes/pi-anthropic-auth) instead. This implementation remains available for reference. For new installations, follow the linked extension's instructions.
+
 Use an Anthropic Claude plan with the [Pi coding agent](https://github.com/earendil-works/pi) through OAuth.
 
 This Pi extension allows you to authenticate with Anthropic through OAuth and use an eligible Claude plan instead of an Anthropic API key. Requests are sent directly from your machine to Anthropic. No relay or fallback account is involved.
@@ -17,9 +20,9 @@ While loaded, the extension replaces Pi's built-in `anthropic` provider. It reta
 
 The initial release is tested against Pi 0.80.6. It follows Pi's current extension API and does not include compatibility shims for older releases.
 
-## Install
+## Historical installation
 
-Install the extension from GitHub:
+To install this archived version from GitHub:
 
 ```bash
 pi install git:github.com/sylv-io/pi-anthropic-auth
